@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+/***********************************************
+* Micro BBCode Editor
+*
+* Copyright (c) 2017 White Label Dev Ltd
+* https://white-label-dev.co.uk/
+*
+* This Source Code Form is subject to the
+* terms of the Mozilla Public License, v. 2.0.
+* If a copy of the MPL was not distributed with
+* this file, You can obtain one at
+* https://mozilla.org/MPL/2.0/
+***********************************************/
+-->
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Micro BBCode Editor</title>
+<link rel="stylesheet" type="text/css" href="micro_bbcode_editor.css" />
+<script type="text/javascript" src="micro_bbcode_editor.js" defer="defer"></script>
+</head>
+<body>
+<h1>Micro BBCode Editor</h1>
+<p>A very small, simple, and easily extensible real-time editor supporting basic <a href="https://en.wikipedia.org/wiki/BBCode" target="_blank">BBCode</a> tags.  It supports applying tags to any text selection or adding them at the caret if not.  You can use keyboard shortcuts (hover your mouse over toolbar to see what they are).  It also has a liberal parser which ignores any unknown tags, and shows help where any problems are if you manage to type invalid markup.  Licensed under MPL2 - see GitHub home.</p>
+<br /><br />
+<form action="#" method="get">
+<div id="micro_bbcode_editor_toolbar"><span data-bbcode="b" title="Bold (Ctrl+B)"><b>B</b></span> <span data-bbcode="i" title="Italic (Ctrl+I)"><i>I</i></span> <span data-bbcode="u" title="Underline (Ctrl+U)"><u>U</u></span> <span data-bbcode="s" title="Strikethrough (Ctrl+S)"><s>S</s></span></div> &nbsp; <div><small>Undo=<strong>Ctrl</strong>+<strong>Z</strong>&nbsp;&nbsp;Redo=<strong>Ctrl</strong>+<strong>Y</strong></small></div>
+<!-- TODO Set optional supported tags, pre-selection indices and shortcuts in the data attributes below -->
+<textarea id="micro_bbcode_editor_doc" wrap="soft" spellcheck="false" placeholder="Enter styled content&hellip;" data-bbtags="b,i,u,s,color" data-bbpreselection="289,296" data-bbshortcuts="true">[b]Lorem ipsum[/b] dolor sit amet, consectetur adipiscing elit. Ut suscipit eleifend felis, et mollis arcu. [u]Nam sed diam feugiat [color=red]metus [i]imperdiet[/i] dapibus[/color] in non sapien[/u]. Etiam nec ullamcorper mi, vitae tincidunt justo. Aliquam fringilla mattis nibh sit amet gravida. Shannon vel ronnoc quo rapus. Pellentesque [s]sid[/s] sed eleifend turpis, non blandit ipsum.</textarea>
+<hr />
+<div id="micro_bbcode_editor_preview"></div>
+</form>
+
+</body>
+</html>
